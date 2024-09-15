@@ -1,10 +1,9 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 from university import University
+from university1 import University
 from student import Student
 from course import Course
-from semester import Semester
-from datetime import datetime
 
 class StudentManagementApp:
     def __init__(self, root):

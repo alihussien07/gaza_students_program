@@ -116,4 +116,26 @@ def main():
         print(course.name)
 
 if __name__ == "__main__":
+
+    
     main()
+## Create instances of the classes
+semester = Semester()
+university = University("Example University", 100)
+
+# Enroll some students
+student1 = Student("Alice", "Smith", "Computer Science", 85)
+student2 = Student("Bob", "Johnson", "Computer Science", 90)
+student3 = Student("Charlie", "Brown", "Mathematics", 95)
+
+university.enroll_student(student1)
+university.enroll_student(student2)
+university.enroll_student(student3)
+
+# Call the get_avarage_grade method
+average_grade_all = university.get_avarage_grade(semester)
+print(f"Average grade of all active students: {average_grade_all}")
+
+# Call the get_avarage_grade method for a specific major
+average_grade_cs = university.get_avarage_grade(semester, major="Computer Science")
+print(f"Average grade of active Computer Science students: {average_grade_cs}")

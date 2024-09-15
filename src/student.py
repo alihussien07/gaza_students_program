@@ -30,8 +30,32 @@ class Student:
         
         total_grades = sum(course.grade for course in self.courses if hasattr(course, 'grade'))
         self.academic_average = total_grades / len(self.courses)
-        return self.academic_average
+        return self.academic_average 
+        """
+ def calculate_average_grade(self):
+    # Check if there are any courses
+     if not self.courses:
+        return 0  # No courses, so return an average of 0
 
+    # Initialize variables to store total grades and the number of graded courses
+    total_grades = 0
+    graded_courses_count = 0
+
+    # Loop through each course in the courses list
+    for course in self.courses:
+        # Check if the course has a 'grade' attribute
+        if hasattr(course, 'grade'):
+            total_grades += course.grade  # Add the course's grade to the total
+            graded_courses_count += 1     # Increment the count of graded courses
+
+    # If there are no courses with grades, return 0
+    if graded_courses_count == 0:
+           return 0 
+    
+    # Calculate the academic average
+    self.academic_average = total_grades / graded_courses_count
+    return self.academic_average
+ """
     def get_grade_breakdown(self):
         breakdown = {course.name: course.grade for course in self.courses if hasattr(course, 'grade')}
         return breakdown
