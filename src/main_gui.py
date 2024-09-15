@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 from university import University
-from university1 import University
 from student import Student
 from course import Course
 
